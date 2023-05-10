@@ -3,13 +3,13 @@ A website that gives you one new #inspirational quote throughout the month of Ma
 
 Using Python, Flask, Apscheduler, Datetime may-app.akubuezeernest.com #python #SoftwareEngineering #techbro
 
-#STACK
+# STACK
 - Python
 - Flask
 - Apscheduler
 - Datetime
 
-##How it works
+# How it works
 Install the requirements.txt
 
 Run the app.py, Flask would generate a developement url where you can see your webapp
