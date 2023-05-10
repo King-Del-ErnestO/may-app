@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>May App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <meta http-equiv="refresh" content="10">
+     <script>
+        function updateClock() {
+            var now = new Date();
+            var date = now.toLocaleDateString();
+            var time = now.toLocaleTimeString();
+            var clock = date + ' ' + time;
+            document.getElementById('clock').textContent = clock;
+        }
+
+        setInterval(updateClock, 1000);
+    </script>
+    <style>
+        body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .content {
+        min-height: 100%;
+        margin-bottom: 250px; /* This should be equal to or greater than the height of the footer */
+      }
+        h1{
+        color:pink;
+        text-align:right;
+        padding:20px;
+        }
+        .footer {
+        height: 120px; /* Set the height of the footer */
+        background-color: #333;
+        color: #fff;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+</head>
+<body style="background-color:black; color:#fff;">
+<h1 style="">Happy Workers' Month</h1>
+<h2 style="text-align:center;">Thoughts for you today! - <span id="clock"></span></h2>
+    <div class="content">
+        <p>{{ item[0] }}</p>
+        <p>{{ item[1] }}</p>
+        {% for it in items %}
+            <p>{{ it }}</p>
+        {% endfor %}
+    </div>
+
+	<!------footer start--------->
+	<footer>
+        <div class="footer">
+
+		<p>To get in touch with me for Python/Software Engineering/ML/AI projects and technology - please click on any of the links below:</p>
+		<div class="social" id="channel">
+			<a href="https://github.com/King-Del-ErnestO"><i class="fab fa-github"></i></a>
+			<a href="https://www.linkedin.com/in/ernest-akubueze-b53602229"><i class="fab fa-linkedin"></i></a>
+			<a href="https://wa.me/2348165970350"><i class="fab fa-whatsapp"></i></a>
+			<a href="https://twitter.com/AkubuezeDel"><i class="fab fa-twitter"></i></a>
+			<a href="mailto:delernestoa@gmail.com"><i class="fa fa-envelope"></i></a>
+		</div>
+		<p class="end">© Copyrights 2023 designed Akubueze Ernest</p>
+        </div>
+	</footer>
+</body>
+</html>

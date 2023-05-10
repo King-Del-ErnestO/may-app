@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Akubueze Ernest">
+    <meta name="author" content="Devcrud">
+    <title>May App</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <meta http-equiv="refresh" content="1800">
+    <!-- font icons -->
+
+    <link rel="stylesheet" href="{{url_for('static', filename='vendors/themify-icons/css/themify-icons.css')}}">
+
+    <!-- Bootstrap + Dorang main styles -->
+	<link rel="stylesheet" href="{{url_for('static', filename='css/dorang.css')}}">
+    <script>
+        function updateClock() {
+            var now = new Date();
+            var date = now.toLocaleDateString();
+            var time = now.toLocaleTimeString();
+            var clock = date + ' ' + time;
+            document.getElementById('clock').textContent = clock;
+        }
+
+        setInterval(updateClock, 1000);
+    </script>
+
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home" class="dark-theme">
+    
+
+    <div class="theme-selector">
+        <a href="javascript:void(0)" class="spinner">
+            <i class="ti-paint-bucket"></i>
+        </a>
+        <div class="body">
+            <a href="javascript:void(0)" class="light"></a>
+            <a href="javascript:void(0)" class="dark"></a>
+        </div>
+    </div>  
+
+    <!-- page header -->
+    <header class="header">
+        <div class="overlay"></div>
+        <div class="header-content">
+            <h1 class="header-title">Happy Workers' Month!</h1>
+            <p style="font-size:20px;">Thought for you today! - <span id="clock"></span></p>
+            <h3 class="header-subtitle">{{ item[0] }}</h3>
+            <h3 class="header-subtitle">-{{ item[1] }}</h3>
+
+            <div class="col-md-10 col-lg-8 m-auto" style="height:30px;">
+             <marquee direction="down" scrollamount="1" style="height:250px;">
+                <div class="" style="text-align:left;">
+            {% for it in items %}
+                <h3 style="font-size:20px;"><i class="ti-heart text-danger"></i> {{ it }}</h3>
+                <br>
+            {% endfor %}
+                </div>
+                 </marquee>
+                </div>
+        </div>
+    </header><!-- end of page header -->
+
+
+    <!--footer & pre footer -->
+    <div class="contact-section">
+        <div class="overlay"></div>
+        <!-- container -->
+        <div class="container">
+            <div class="col-md-10 col-lg-8 m-auto">
+                <h6 class="title mb-2">Contact Me</h6>
+                <p class="mb-5">Feel Free To Send A Message.</p>
+                <form action="https://formsubmit.co/delernestoa@gmail.com" method="post" class="form-group">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="Hello Akubueze Ernest, New Mail from May APP">
+
+                    <input type="text" size="50" class="form-control" placeholder="Your Name" required>
+                    <input type="email" class="form-control" placeholder="Enter Email"requried>
+                    <textarea name="comment" id="comment" rows="6"   class="form-control" placeholder="Write Something" required></textarea>
+                    <input type="submit" value="Send Message" class="form-control">
+                </form>
+            </div>
+
+            <!-- footer -->
+            <footer class="footer">
+                <p class="infos">&copy; <script>document.write(new Date().getFullYear())</script> AKUBUEZE ERNEST</a></p>
+                <span>|</span>  
+                <div class="links">
+                    <a href="https://github.com/King-Del-ErnestO"><i class="fab fa-github"></i></a>
+			<a href="https://www.linkedin.com/in/ernest-akubueze-b53602229"><i class="fab fa-linkedin"></i></a>
+			<a href="https://wa.me/2348165970350"><i class="fab fa-whatsapp"></i></a>
+			<a href="https://twitter.com/AkubuezeDel"><i class="fab fa-twitter"></i></a>
+			<a href="mailto:delernestoa@gmail.com"><i class="fa fa-envelope"></i></a>
+                </div>
+            </footer><!-- end of footer -->
+
+        </div><!-- end of container -->
+    </div><!-- end of pre footer -->
+
+    <!-- core  -->
+    <script src="{{url_for('static', filename='vendors/jquery/jquery-3.4.1.js')}}"></script>
+    <script src="{{url_for('static', filename='vendors/bootstrap/bootstrap.bundle.js')}}"></script>
+
+    <!-- bootstrap affix -->
+    <script src="{{url_for('static', filename='vendors/bootstrap/bootstrap.affix.js')}}"></script>
+
+    <!-- Dorang js -->
+    <script src="{{url_for('static', filename='js/dorang.js')}}"></script>
+
+</body>
+</html>
